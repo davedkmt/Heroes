@@ -1,0 +1,16 @@
+body {
+  background-image:url("https://i.imgur.com/LEEQr.gif");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+h1,h2,h3 p {
+  text-align: center;
+  color: silver;
+  font-size: 35px;
+}
+
+.attackposition {
+margin-top:250px;
+
+}

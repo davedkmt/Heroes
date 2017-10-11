@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add up to Win</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<br>
+  <h1 class="text-center">Add up the powers of the superheros to win!</h1>
+
+<br><br>
+
+  <div class="result">
+    <h2>Match this Number: <div id= "computersChoice"></div> </h2>
+  </div>
+  <br><br>
+  <div class="theSay">
+    <h2>Wins:
+      <div id= "winnersNumber"></div>
+      <br>
+      Losses:
+      <div id= "loosersNumber"></div>
+    </h2>
+  </div>
+  <br>
+  <div class="superheroes">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+    <img src="https://68.media.tumblr.com/6bb4dc6fd3f0f73b105f32962e255d02/tumblr_ona9kfCXGQ1uezmbko4_540.gif" class="img-thumbnail" id="one" alt="superhero1">
+  </div>
+
+  <div class="col-md-3">
+      <img src="http://images6.fanpop.com/image/photos/34700000/man-of-steel-gifs-superman-34785810-500-200.gif" class="img-thumbnail" id="two" alt="superhero2">
+    </div>
+
+    <div class="col-md-3">
+    <img src="http://pa1.narvii.com/6506/10f740988c26bf91d00d145809cb3610194d392f_hq.gif" class="img-thumbnail" id="three" alt="superhero3">
+  </div>
+
+  <div class="col-md-3">
+    <img src="http://www.chrisevansfangirls.com/wp-content/uploads/2015/11/tumblr_nycz6uXpLd1sm0n9yo10_500.gif" class="img-thumbnail" id= "four" alt="superhero4">
+  </div>
+</div>
+</div>
+</div>
+<br>
+  <div class="totalScore">
+    <h2>Your score is:
+      <div id="totalNumber"></div>
+    </h2>
+</div>
+
+
+
+
+  <script type="text/javascript">
+
+  $( document ).ready(function(){
+var random=Math.floor(Math.random()*99+1)
+
+$("#computersChoice").text(random);
+
+var num1= Math.floor(Math.random()*15+1)
+var num2= Math.floor(Math.random()*15+1)
+var num3= Math.floor(Math.random()*15+1)
+var num4= Math.floor(Math.random()*15+1)
+
+var total= 0;
+var wins= 0;
+var losses = 0;
+
+$("#winnersNumber").text(wins);
+$("#loosersNumber").text(losses);
+
+function run(){
+    random=Math.floor(Math.random()*100);
+
+    $("#computersChoice").text(random);
+    num1= Math.floor(Math.random()*15+1);
+    num2= Math.floor(Math.random()*15+1);
+    num3= Math.floor(Math.random()*15+1);
+    num4= Math.floor(Math.random()*15+1);
+    total= 0;
+    $("#totalNumber").text(total);
+    }
+
+function works(){
+alert("You Won!");
+wins++;
+$("#winnersNumber").text(wins);
+run ();
+}
+
+function wrong(){
+alert ("You Lost!");
+
+losses++;
+$("#loosersNumber").text(losses);
+run ();
+}
+
+$("#one").on ('click', function(){
+  total = total + num1;
+
+  $("#totalNumber").text(total);
+      if (total == random){
+        works();
+      }
+      else if ( total > random){
+        wrong();
+      }
+})
+
+$("#two").on ('click', function(){
+  total = total + num2;
+
+  $("#totalNumber").text(total);
+      if (total == random){
+        works();
+      }
+      else if ( total > random){
+        wrong();
+      }
+})
+
+$("#three").on ('click', function(){
+  total = total + num3;
+  $("#totalNumber").text(total);
+
+        if (total == random){
+        run();
+      }
+      else if ( total > random){
+        wrong();
+      }
+})
+$("#four").on ('click', function(){
+  total = total + num4;
+
+  $("#totalNumber").text(total);
+
+        if (total == random){
+        works();
+      }
+      else if ( total > random){
+        wrong();
+      }
+});
+});
+
+  </script>
+
+</body>
+</html>
