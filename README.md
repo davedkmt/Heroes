@@ -15,3 +15,5 @@ The player loses if their score goes above the random number.
 The game restarts whenever the player wins or loses.
 
 When the game begins again, the player should see a new random number. Also, all the buttons will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+
+Link to the app https://davedkmt.github.io/MixedWorld-Heroes/
