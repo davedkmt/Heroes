@@ -7,7 +7,7 @@ The player will be shown a random number at the start of the game.
 When the player clicks on the buttons, it will add a specific amount of points to the player's total score.
 
 The game will hide this amount until the player clicks the buttons.
-When they do click one, update the player's score counter.
+When they do click one, it updates the player's score counter.
 The player wins if their total score matches the random number from the beginning of the game.
 
 The player loses if their score goes above the random number.
